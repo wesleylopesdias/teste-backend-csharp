@@ -25,6 +25,7 @@ namespace Tests.TorreHanoi.Application
             mockLogger.Setup(s => s.Logar(It.IsAny<string>(), It.IsAny<TipoLog>()));
 
             var mockDesignerService = new Mock<IDesignerService>();
+            mockDesignerService.Setup(s => s.Desenhar()).Returns(() => new System.Drawing.Bitmap(1, 1));
 
             var mockTorreHanoiDomainService = new Mock<ITorreHanoiDomainService>();
             mockTorreHanoiDomainService.Setup(s => s.Criar(It.IsAny<int>())).Returns(Guid.NewGuid);
@@ -79,7 +80,15 @@ namespace Tests.TorreHanoi.Application
         [TestCategory(CategoriaTeste)]
         public void ObterImagemProcessoPor_Deve_Retornar_Imagem()
         {
-            Assert.Fail();
+            var responseObterImagemProcessoPor = _service.ObterImagemProcessoPor(Guid.NewGuid().ToString());
+
+
+            Assert.IsNotNull(responseObterImagemProcessoPor, "Resposta nula");
+            Assert.AreEqual(responseObterImagemProcessoPor.StatusCode, HttpStatusCode.OK, "Codigo de status inexperado");
+            Assert.IsNotNull(responseObterImagemProcessoPor.Imagem, "Imagem nula");
+            Assert.IsTrue(responseObterImagemProcessoPor.IsValid, "Resposta invalida");
+            Assert.IsTrue(responseObterImagemProcessoPor.MensagensDeErro.Count == 0, "Mensagens de erro retornadas");
+
         }
     }
 }

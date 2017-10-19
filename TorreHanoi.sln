@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Presentation", "1.Presentation", "{812061B1-EA11-43C3-A050-5140664FF946}"
 EndProject
@@ -32,6 +32,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.TorreHanoi.CacheManager", "4.Infrastructure\Infrastructure.TorreHanoi.CacheManager\Infrastructure.TorreHanoi.CacheManager.csproj", "{F3537F21-A3D4-4642-A560-2EA23EF9DD33}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.TorreHanoi.Logger", "4.Infrastructure\Infrastructure.TorreHanoi.Logger\Infrastructure.TorreHanoi.Logger.csproj", "{415D27DD-10D7-49F6-A109-3556A6E3C290}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{36AD0C74-380D-4C6F-9DBF-B7303D3A1CC0}"
+	ProjectSection(SolutionItems) = preProject
+		0.Comments.md = 0.Comments.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -94,5 +99,8 @@ Global
 		{18D52A96-F541-443E-8595-ED2DB2DCCDFF} = {C686F904-FB17-4A9D-83CA-70788DC81D56}
 		{F3537F21-A3D4-4642-A560-2EA23EF9DD33} = {C686F904-FB17-4A9D-83CA-70788DC81D56}
 		{415D27DD-10D7-49F6-A109-3556A6E3C290} = {C686F904-FB17-4A9D-83CA-70788DC81D56}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65666A00-3C06-4346-8885-928DC7DF9F6D}
 	EndGlobalSection
 EndGlobal

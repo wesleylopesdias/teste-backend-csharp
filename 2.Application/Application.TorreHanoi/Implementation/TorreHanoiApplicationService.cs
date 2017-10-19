@@ -103,7 +103,9 @@ namespace Application.TorreHanoi.Implementation
             }
             try
             {
-                var torre = _domainService.ObterPor(new Guid());
+                // Era _domainService.ObterPor(new Guid()), sempre procurando a torre 00000000-0000-0000-0000-000000000000.
+                // Considerando que id já foi validado acima, usando o construtor diretamente.
+                var torre = _domainService.ObterPor(new Guid(id));
 
                 _designerService.Inicializar(_adpterTorreHanoi.DomainParaDesignerDto(torre));
 
